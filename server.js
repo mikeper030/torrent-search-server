@@ -1,11 +1,16 @@
 var express = require('express');
-const app = express();
-const port = 3000;
-const path = require('path');
 const createApi = require('./createApi');
+const path = require('path');
+const TorrentSearchApi = require('torrent-search-api');
+const app = express();
+
+const port = 8080;
+
+
+const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 module.exports = createApi(path.join(__dirname, './lib/providers'));
-const TorrentSearchApi = require('torrent-search-api');
+
 
 app.get('/search/:keyword', function (req, res, next) {
     var query = req.params.keyword;
@@ -20,7 +25,7 @@ console.log(err);
 }
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, ip,() => console.log(`Example app listening on port ${port}!`))
 
 
 async function search(query) {
