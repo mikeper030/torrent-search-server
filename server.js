@@ -32,4 +32,4 @@ async function search(query) {
     const torrents = await TorrentSearchApi.search(query,'',20);
 	return torrents;
 }
-
+module.exports=app;
