@@ -14,7 +14,7 @@ const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 app.get('/search/:keyword', function (req, res, next) {
     var query = req.params.keyword;
-TorrentSearchApi.enablePublicProviders();
+TorrentSearchApi.enableProvider('ThePirateBay');
 try{
 search(query).then(result => {
    res.setHeader('Content-Type', 'application/json');
