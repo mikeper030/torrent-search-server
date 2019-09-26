@@ -9,7 +9,7 @@ const port = 8080;
 
 const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
-module.exports = createApi(path.join(__dirname, './lib/providers'));
+
 
 
 app.get('/search/:keyword', function (req, res, next) {

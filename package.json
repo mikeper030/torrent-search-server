@@ -1,8 +1,8 @@
 {
-  "name": "torrent-search-api",
+  "name": "torrent-search",
   "version": "2.0.9",
-  "description": "Yet another node torrent scraper based on x-ray. (Support iptorrents, torrentleech, torrent9, Yyggtorrent, ThePriatebay, torrentz2, 1337x, KickassTorrent, Rarbg, TorrentProject, Extratorrent)",
-  "main": "index.js",
+  "description": "search torrents",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest watch",
@@ -38,6 +38,7 @@
     "lodash": "^4.17.11",
     "request": "^2.79.0",
     "string-format": "^0.5.0",
+    "torrent-search-api": "^2.0.9",
     "x-ray-scraper": "^3.0.5"
   },
   "devDependencies": {
