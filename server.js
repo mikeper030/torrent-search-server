@@ -29,7 +29,7 @@ app.listen(port, ip,() => console.log(`Example app listening on port ${port}!`))
 
 
 async function search(query) {
-    const torrents = await TorrentSearchApi.search(query,'',20);
+    const torrents = await TorrentSearchApi.search(query,'',40);
 	return torrents;
 }
 module.exports=app;
