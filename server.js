@@ -17,7 +17,6 @@ app.get('/search/:keyword', function (req, res, next) {
 	
 TorrentSearchApi.enableProvider('ThePirateBay');
 
-TorrentSearchApi.enableProvider('Rarbg');
 
 try{
 search(query).then(result => {
